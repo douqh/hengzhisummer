@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 -->
+
+<mapper namespace="mapper.UserMapper">
+<!--<resultMap id="User" type="resultUser" autoMapping="true">-->
+<!--<id column="id" property="id"/>-->
+<!--<result column="username" property="username"/>-->
+<!--</resultMap>-->
+
+    <select id="login" resultType="entity.user">
+        select * from user where username=#{username}
+    </select>
+
+
+    <insert id="register" parameterType="entity.user" keyColumn="studentID" useGeneratedKeys="true" keyProperty="studentID">
+        INSERT INTO user (
+
+        username,
+        password,
+        email
+        )
+        VALUES
+        (
+
+        #{username},
+        #{password},
+        #{email}
+        )
+    </insert>
+
+    <select id="AllUser" resultType="entity.user">
+        select * from user
+    </select>
+
+    <select id="PageUser" resultType="entity.user" parameterType="entity.page">
+        select * from user limit #{startRecord},#{pageSize}
+    </select>
+
+
+
+    <insert id="AddUser" parameterType="entity.user">
+        INSERT INTO user (
+        studentID,
+        username,
+        password,
+        age,
+        email
+        )
+        VALUES
+        (
+        #{studentID},
+        #{username},
+        #{password},
+        #{age},
+        #{email}
+        )
+    </insert>
+
+    <delete id="DeleteUser" parameterType="entity.user">
+        delete from user where studentID=#{studentID}
+    </delete>
+
+    <update id="UpdateUser" parameterType="entity.user">
+    UPDATE user
+    <trim prefix="set" suffixOverrides=",">
+    <if test="username!=null and username != ''">username = #{username},</if>
+    <if test="password!=null and password != ''">password = #{password},</if>
+        <if test="age!=0">age = #{age},</if>
+        <if test="email!=null and username != ''">email = #{email}</if>
+    </trim>
+    WHERE
+    (studentID=#{studentID})
+    </update>
+
+    <update id="UpdatePassword" parameterType="entity.user">
+        UPDATE user
+            <if test="password!=null">password = #{password},</if>
+        WHERE
+        (studentID=#{studentID});
+    </update>
+
+
+
+
+
+
+
+
+
+</mapper>

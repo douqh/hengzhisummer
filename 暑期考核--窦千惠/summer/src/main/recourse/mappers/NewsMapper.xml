@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 -->
+
+<mapper namespace="mapper.NewsMapper">
+<!--<resultMap id="User" type="resultUser" autoMapping="true">-->
+<!--<id column="id" property="id"/>-->
+<!--<result column="username" property="username"/>-->
+<!--</resultMap>-->
+
+    <select id="AllNews" resultType="entity.news">
+        select * from news
+    </select>
+
+    <select id="OneNews" resultType="entity.news">
+        select * from news where NewsID=#{newsID}
+    </select>
+
+    <select id="SearchNews" resultType="entity.news" parameterType="java.lang.String">
+       select * from news where NewsTitle like "%"#{searchContent,jdbcType=VARCHAR}"%" or NewsContent like "%"#{searchContent,jdbcType=VARCHAR}"%"
+    </select>
+
+    <select id="PageNews" resultType="entity.news" parameterType="entity.page">
+        select * from news limit #{startRecord},#{pageSize}
+    </select>
+
+    <delete id="DeleteNews" parameterType="entity.news">
+        delete from news where newsID=#{newsID}
+    </delete>
+
+    <update id="UpdateNews" parameterType="entity.news">
+        UPDATE news
+        <trim prefix="set" suffixOverrides=",">
+            <if test="newsTitle!=null">NewsTitle = #{newsTitle},</if>
+            <if test="newsAuthor!=null">NewsAuthor = #{newsAuthor},</if>
+            <if test="newsContent!=null">NewsContent = #{newsContent},</if>
+            <if test="newsWriteTime!=null">NewsWriteTime = #{newsWriteTime},</if>
+            <if test="newsSortID!=0">NewsSortID = #{newsSortID}</if>
+        </trim>
+        WHERE
+        (NewsID=#{newsID})
+    </update>
+
+    <insert id="AddNews" parameterType="entity.news">
+        INSERT INTO news (
+        NewsTitle,
+        NewsAuthor,
+        NewsContent,
+        NewsWriteTime,
+        NewsAlterTime,
+        NewsSortID
+        )
+        VALUES
+        (
+        #{newsTitle},
+        #{newsAuthor},
+        #{newsContent},
+        #{newsWriteTime},
+        #{newsAlterTime},
+        #{newsSortID}
+        )
+    </insert>
+
+</mapper>

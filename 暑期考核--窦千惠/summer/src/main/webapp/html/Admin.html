@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>后台管理系统</title>
+		<link rel="stylesheet" href="../lib/bootstrap3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../css/Admin.css" />
+	</head>
+
+	<body>
+		<div class="root">
+			<div class="left">
+				<img src="../img/school union.png" id="union" />
+				<img src="../img/NENU-English.png" id="NENU" />
+			</div>
+			<div class="right">
+				<div id="log">
+					<img src="../img/登录.png" />
+				</div>
+				<div id="wel">
+					<span><strong><em>Teacher,</em>欢迎您！</strong></span>
+				</div>
+				<div class="return">
+					<button><a href="Union.html">退出</a></button>
+				</div>
+			</div>
+		</div>
+		<div class="date">
+			<div id="clock">
+				<img src="../img/钟表-1.png" />
+			</div>
+			<div id="tab">
+				<p id="aDate"></p>
+				<p id="aTime"></p>
+				<p id="week"></p>
+			</div>
+		</div>
+		<div class="ability">
+			<div id="left" class="left1">
+				<ul class="nav nav-pills nav-stacked teach" id="lead">
+					<li class="active" id="teach">
+						<a href="#" style="font-size:20px;">后台管理<span class="glyphicon glyphicon-menu-down"></span></a>
+					</li>
+					<li onclick="show1()">
+						<a id="testgl" href="#">新闻管理</a>
+					</li>
+					<li onclick="show2()">
+						<a id="tkgl" href="#">公告管理</a>
+					</li>
+					<li onclick="show3()">
+						<a id="dhgl" href="#">首页导航栏分类</a>
+					</li>
+					<li onclick="show4()">
+						<a id="person" href="#">个人信息</a>
+					</li>
+					<li onclick="show5()">
+						<a id="all" href="#">管理员信息库</a>
+					</li>
+				</ul>
+			</div>
+			<div class="correct">
+				<!--新闻管理页-->
+				<div class="newscontrol" id="newscontrol">
+					<div class="search">
+						<img src="../img/搜索--1.png">
+						<input type="text" placeholder="请输入新闻序号..." id="search" onkeyup="Search()">
+					</div>
+					<div class="right1">
+						<table id="students">
+							<tr class="students-nav">
+								<td class="newsid">序号</td>
+								<td class="newspaper">新闻</td>
+								<td class="do">操作</td>
+							</tr>
+							<tbody id="listTable">
+								<tr>
+									<td class="schoolid">1</td>
+									<td class="name">
+										<a href="/">我校在2018年度长春市 “高校文明杯”评选活动中获多项荣誉 </a>
+									</td>
+									<td class="do">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+									</td>
+								</tr>
+								<tr>
+									<td class="schoolid">2</td>
+									<td class="name">
+										<a href="/">经济学院创新创业工作现场会在净月社区国家级众创空间举行 </a>
+									</td>
+									<td class="do">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+									</td>
+								</tr>
+								<tr>
+									<td class="schoolid">3</td>
+									<td class="name">
+										<a href="/">生命科学学院2015级生物科学班红色体验教育实践活动圆满成功 </a>
+									</td>
+									<td class="do">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+									</td>
+								</tr>
+								<tr>
+									<td class="schoolid">4</td>
+									<td class="name">
+										<a href="/">信息科学与技术学院“书香校园，文化东师”读书报告会圆满成功 </a>
+									</td>
+									<td class="do">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+									</td>
+								</tr>
+
+								<tr>
+									<td class="schoolid">5</td>
+									<td class="name">
+										<a href="/">2017年净月校区辅导员消防应急实践培训成功举办 </a>
+									</td>
+									<td class="do">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--	增加数据---------------->
+					<div class="id">
+						<h1>处理数据</h1>
+						<form>
+							<table class="table table-hover table-bordered" cellspacing="0">
+								<tr>
+									<th>序号</th>
+									<td><input type="text" name="" class="form-control" id="num" /></td>
+								</tr>
+								<tr>
+									<th>新闻</th>
+									<td><input type="text" name="" class="form-control" id="username" /></td>
+								</tr>
+								<tr>
+									<td colspan="2" id="control">
+										<input type="reset" value="重置" class="btn btn-primary" id="reset" />
+										<input type="button" value="添加" class="btn btn-success" id="add" onclick="addList()" />
+										<input type="button" value="更新" class="btn btn-info" id="" onclick="update()" />
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+				<!--公告管理页-->
+				<div class="advicecontrol" id="advicecontrol">
+					<div class="search1">
+						<img src="../img/搜索--1.png">
+						<input type="text" placeholder="请输入公告序号..." id="search1" onkeyup="Search1()">
+					</div>
+					<div class="right2">
+						<table id="warn">
+							<tr class="warn-nav">
+								<td class="warnid">序号</td>
+								<td class="warnpaper">公告</td>
+								<td class="do1">操作</td>
+							</tr>
+							<tbody id="listTable1">
+								<tr>
+									<td class="warnid">1</td>
+									<td class="name1">
+										<a href="/">我校在2018年度长春市 “高校文明杯”评选活动中获多项荣誉 </a>
+									</td>
+									<td class="do1">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del1(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info" onclick="modify1(this)" />
+									</td>
+								</tr>
+								<tr>
+									<td class="warnid">2</td>
+									<td class="name1">
+										<a href="/">经济学院创新创业工作现场会在净月社区国家级众创空间举行 </a>
+									</td>
+									<td class="do1">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del1(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info" onclick="modify1(this)" />
+									</td>
+								</tr>
+								<tr>
+									<td class="warnid">3</td>
+									<td class="name1">
+										<a href="/">生命科学学院2015级生物科学班红色体验教育实践活动圆满成功 </a>
+									</td>
+									<td class="do1">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del1(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info" onclick="modify1(this)" />
+									</td>
+								</tr>
+								<tr>
+									<td class="warnid">4</td>
+									<td class="name1">
+										<a href="/">信息科学与技术学院“书香校园，文化东师”读书报告会圆满成功 </a>
+									</td>
+									<td class="do1">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del1(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info" onclick="modify1(this)" />
+									</td>
+								</tr>
+
+								<tr>
+									<td class="warnid">5</td>
+									<td class="name1">
+										<a href="/">2017年净月校区辅导员消防应急实践培训成功举办 </a>
+									</td>
+									<td class="do1">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del1(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info" onclick="modify1(this)" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--增加公告-->
+					<div class="id1">
+						<h1>处理数据</h1>
+						<form>
+							<table class="table table-hover table-bordered" cellspacing="0">
+								<tr>
+									<th>序号</th>
+									<td><input type="text" name="" class="form-control" id="num1" /></td>
+								</tr>
+								<tr>
+									<th>公告</th>
+									<td><input type="text" name="" class="form-control" id="username1" /></td>
+								</tr>
+								<tr>
+									<td colspan="2" id="control">
+										<input type="reset" value="重置" class="btn btn-primary" id="reset" />
+										<input type="button" value="添加" class="btn btn-success" id="add" onclick="addList1()" />
+										<input type="button" value="更新" class="btn btn-info" id="" onclick="update1()" />
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+				<!--本站导航管理-->
+				<div class="leadcontrol" id="leadcontrol">
+
+				</div>
+				<!--个人信息-->
+				<div class="personcontrol" id="personcontrol">
+					<div id="number">
+						<div class="panel2 panel-default">
+							<div class="panel-heading">Logo上传</div>
+							<div class="panel-body">
+								<span>&nbsp;&nbsp;&nbsp;管理员头像：</span><img src="../img/canvas.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>建议尺寸48*48,大小不超过20kb</span><br><br>
+								<input type="file" id="file">
+								<button class="btn btn-info">选择图片</button><br><br>
+								<span>&nbsp;&nbsp;&nbsp;应用名称：</span><input id="name1" type="button" value="东北师范大学学生会" class="names"><span id="change1">修改</span>
+							</div>
+						</div>
+						<div class="panel3 panel-default">
+							<div class="panel-heading">账号信息</div>
+							<div class="panel-body">
+								<span>&nbsp;&nbsp;&nbsp;&nbsp;注册邮箱：</span><span id="email">2422424232@qq.com</span><br><br>
+								<span>&nbsp;&nbsp;&nbsp;&nbsp;昵称：</span><input id="name2" type="button" value="皮卡丘" class="names"><span id="change2">修改</span><br><br>
+								<span>&nbsp;&nbsp;&nbsp;&nbsp;手机号码：</span><input id="name3" type="button" value="12345678987" class="names"><span id="change3">修改</span><br><br>
+								<span>&nbsp;&nbsp;&nbsp;&nbsp;注册时间：</spa><span id="email">2019-1-1</span><br><br>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--管理员信息库-->
+				<div class="allperson" id="allperson">
+					<div class="search2">
+						<img src="../img/搜索--1.png">
+						<input type="text" placeholder="请输入管理员ID..." id="search2" onkeyup="Search2()">
+					</div>
+					<div class="right3">
+						<table id="every">
+							<tr class="every-nav">
+								<td class="adminid">ID</td>
+								<td class="username">用户名</td>
+								<td class="password">密码</td>
+								<td class="age">年龄</td>
+								<td class="email">邮箱</td>
+								<td class="do2">操作</td>
+							</tr>
+							<tbody id="listTable2">
+								<tr>
+									<td class="adminid">111111</td>
+									<td class="name">Alice</td>
+									<td class="password">1234567</td>
+									<td class="age">18</td>
+									<td class="email">123456789@qq.com</td>
+									<td class="do2">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del2(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info x1" />
+									</td>
+								</tr>
+								<tr>
+									<td class="adminid">222222</td>
+									<td class="name">Aler</td>
+									<td class="password">1234567</td>
+									<td class="age">18</td>
+									<td class="email">123456789@qq.com</td>
+									<td class="do2">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del2(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info x1" />
+									</td>
+								</tr>
+								<tr>
+									<td class="adminid">333333</td>
+									<td class="name">Helen</td>
+									<td class="password">1234567</td>
+									<td class="age">18</td>
+									<td class="email">123456789@qq.com</td>
+									<td class="do2">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del2(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info x1" />
+									</td>
+								</tr>
+								<tr>
+									<td class="adminid">444444</td>
+									<td class="name">Jane</td>
+									<td class="password">1234567</td>
+									<td class="age">18</td>
+									<td class="email">123456789@qq.com</td>
+									<td class="do2">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del2(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info x1" />
+									</td>
+								</tr>
+								<tr>
+									<td class="adminid">555555</td>
+									<td class="name">Jack</td>
+									<td class="password">1234567</td>
+									<td class="age">18</td>
+									<td class="email">123456789@qq.com</td>
+									<td class="do2">
+										<input type="button" name="" value="删除" class="btn btn-danger" onclick="del2(this)" />
+										<input type="button" name="" value="修改" class="btn btn-info x1" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button id="fabu" onclick="show6()" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="display:inline-block; width:120px;height:40px;float:right;">
+			            <span class="glyphicon glyphicon-plus" ></span>
+			            &nbsp;&nbsp;发布考试
+		            </button>
+					<div id="fb">
+						<h1>处理数据</h1>
+						<form>
+							<table class="table table-hover table-bordered" cellspacing="0">
+								<tr>
+									<th>序号</th>
+									<td><input type="text" name="" class="form-control" id="num1" /></td>
+								</tr>
+								<tr>
+									<th>公告</th>
+									<td><input type="text" name="" class="form-control" id="username1" /></td>
+								</tr>
+								<tr>
+									<td colspan="2" id="control">
+										<input type="reset" value="重置" class="btn btn-primary" id="reset" />
+										<input type="button" value="添加" class="btn btn-success" id="add" onclick="addList1()" />
+										<input type="button" value="更新" class="btn btn-info" id="" onclick="update1()" />
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script type="text/javascript" src="../js/Admin.js"></script>

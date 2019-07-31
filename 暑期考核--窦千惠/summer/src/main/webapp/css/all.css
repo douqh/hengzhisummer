@@ -1,0 +1,224 @@
+.root{
+	background-color: #62a1dd;
+	width: 1281px;
+	height: 135px;
+	margin-top: -9px;
+	margin-left: -9px;
+}
+.left{
+	width: 60%;
+	float: left;
+}
+#union{
+	width: 100px;
+	height: 100px;
+	margin-bottom: -17px;
+	margin-left: 33px;
+}
+#NENU{
+	margin-top: 30px;
+}
+.right{
+	float: left;
+	margin-top: 30px;
+	margin-left: 115px;
+}
+.right img{
+	width: 50px;
+	height: 50px;
+}
+.right span{
+	margin-left: 10px;
+	color: white;
+	font-size: 23px;
+}
+.right em{
+	color: #fbf31a;
+}
+#log{
+	float: left;
+	margin-top: 10px;
+}
+#wel{
+	float: left;
+	margin-top: 20px;
+}
+.return{
+	float: left;
+	margin-top: 20px;
+	margin-left: 15px;
+}
+.return button{
+	background-color: #8fc938;
+	width: 85px;
+	height: 33px;
+}
+.return a{
+	color: white;
+	font-weight: 800;
+	text-decoration: none;
+	font-size: 18px;
+}
+.date{
+	float: left;
+	width: 1280px;
+	background-color: #e1edf5;
+	height: 33px;
+	margin-left: -9px;
+}
+#clock{
+	float: left;
+	margin-left: 20px;
+}
+#aDate{
+	float: left;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+#aTime{
+	float: left;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+#week{
+	float: left;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+.ability{
+	width:100%;
+	height:4025px;
+	background-color:rgb(245 245 245);
+	border-top:1px solid rgb(204 204 204);
+}
+.ability .left1{
+	width:200px;
+	height:4000px;
+	float:left;
+	border-right:1px solid #D3D3D3;
+	background-color: #f8f8f8;
+	font-size: 17px;
+	position: relative;
+	z-index: 1;
+	font-family: "宋体"
+
+}
+.left1 span{
+	font-size:15px;
+	margin-top:8px;
+	float:right;
+}
+.ability .correct{
+	width: 1060px;
+	height: 700px;
+	float:left;
+	font-family: "宋体"
+}
+.search{
+	margin-left: 100px;
+	margin-top: 50px;
+}
+#search{
+	width: 425px;
+	height: 30px;
+}
+.btn-danger{
+	width: 59px;
+	margin-right: 10px;
+	border-radius: 5px;
+	height: 32px;
+}
+.btn-info{
+	width: 56px;
+	height: 33px;
+	border-radius: 5px;
+}
+.right1{
+	margin-top: 50px;
+	float: left;
+	width: 1063px;
+}
+.all{
+	width: 85px;
+}
+.right1 td{
+	text-align: center;
+}
+.right1 #news,.right1 #news tr,.right1 #news td {
+	border: 1px solid #dcdcdc;
+	border-collapse: collapse;
+}
+.right1 #news tr{
+	height: 40px;
+}
+.right1 #news .news-nav{
+	height: 60px;
+	background-color: #e0ffff;
+	opacity: .8;
+	font-weight: 700;
+}
+.right1 #news .studentID{
+	width:200px;
+	text-align: center;
+}
+.right1 #news .username{
+	width:150px;
+	text-align: center;
+}
+.right1 #news .age{
+	width:100px;
+	text-align: center;
+}
+.right1 #news .email{
+	width:380px;
+	text-align: center;
+}
+.right1 #news .do{
+	width: 225px;
+	text-align: center;
+}
+.id{
+	margin-left: 100px;
+	margin-top: 244px;
+	float: left;
+	width: 900px;
+}
+.id h1{
+	margin-left: 120px;
+}
+.id tr,.id td,.id th{
+	border: 1px solid #dcdcdc;
+	border-collapse: collapse;
+}
+.id td{
+	width: 300px;
+	height: 40px;
+}
+.id input{
+	width: 550px;
+	margin-left: 20px;
+}
+.id th{
+	width: 150px;
+	text-align: center;
+}
+#control input{
+	width: 50px;
+	margin-left: 61px;
+}
+.id form{
+	width: 660px;
+}
+.fabu #fabu{
+	display: inline-block;
+	width: 169px;
+	height: 40px;
+	float: right;
+	margin-right: 50px;
+}
+#fb{
+	visibility: hidden;
+	position: absolute;
+	left: 200px;
+	top:50px;
+}

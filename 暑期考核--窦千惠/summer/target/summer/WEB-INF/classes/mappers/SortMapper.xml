@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 -->
+
+<mapper namespace="mapper.SortMapper">
+
+    <select id="AllSort" resultType="entity.sort">
+        select * from sort
+    </select>
+
+    <insert id="AddSort" parameterType="entity.sort">
+        INSERT INTO sort (
+        SortID,
+        SortName,
+        AddTime
+        )
+        VALUES
+        (
+        #{sortID},
+        #{sortName},
+        #{addTime}
+        )
+    </insert>
+
+    <delete id="DeleteSort" parameterType="entity.sort">
+       DELETE sort.* ,news.* ,notice.*
+FROM sort
+LEFT JOIN news
+ON sort.sortID =news.NewsSortID
+LEFT JOIN notice
+ON sort.sortID = notice.NoticeSortID
+WHERE sort.sortID=#{sortID}
+    </delete>
+
+    <update id="UpdateSort" parameterType="entity.sort">
+    UPDATE sort
+    <trim prefix="set" suffixOverrides=",">
+    <if test="sortName!=null">SortName = #{sortName},</if>
+    </trim>
+    WHERE
+    (sortID=#{sortID})
+    </update>
+
+    <select id="SearchNewsSort" resultType="entity.news" parameterType="java.lang.String">
+        select * from news where NewsSortID in (SELECT SortID FROM sort where SortName=#{searchContent})
+    </select>
+
+    <select id="SearchNoticeSort" resultType="entity.notice" parameterType="java.lang.String">
+        select * from notice where NoticeSortID in (SELECT SortID FROM sort where SortName=#{searchContent})
+    </select>
+
+</mapper>

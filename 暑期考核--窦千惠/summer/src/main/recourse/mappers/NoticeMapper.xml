@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 -->
+
+<mapper namespace="mapper.NoticeMapper">
+
+    <select id="AllNotice" resultType="entity.notice">
+        select * from notice
+    </select>
+
+    <select id="SearchNotice" resultType="entity.notice" parameterType="java.lang.String">
+       select * from notice where NoticeTitle like "%"#{searchContent}"%" or  NoticeContent like "%"#{searchContent}"%"
+    </select>
+
+    <select id="PageNotice" resultType="entity.notice" parameterType="entity.page">
+        select * from notice limit #{startRecord},#{pageSize}
+    </select>
+
+    <delete id="DeleteNotice" parameterType="entity.notice">
+        delete from notice where noticeID=#{noticeID}
+    </delete>
+
+    <update id="UpdateNotice" parameterType="entity.notice">
+        UPDATE notice
+        <trim prefix="set" suffixOverrides=",">
+            <if test="noticeTitle!=null">NoticeTitle = #{noticeTitle},</if>
+            <if test="noticeAuthor!=null">NoticeAuthor = #{noticeAuthor},</if>
+            <if test="noticeContent!=null">NoticeContent = #{noticeContent},</if>
+            <if test="noticeWriteTime!=null">NoticeWriteTime = #{noticeWriteTime},</if>
+            <if test="noticeSortID!=0">NoticeSortID = #{noticeSortID}</if>
+        </trim>
+        WHERE
+        (NoticeID=#{noticeID})
+    </update>
+
+    <insert id="AddNotice" parameterType="entity.notice">
+        INSERT INTO notice (
+        NoticeTitle,
+        NoticeAuthor,
+        NoticeContent,
+        NoticeWriteTime,
+        NoticeAlterTime,
+        NoticeSortID
+        )
+        VALUES
+        (
+        #{noticeTitle},
+        #{noticeAuthor},
+        #{noticeContent},
+        #{noticeWriteTime},
+        #{noticeAlterTime},
+        #{noticeSortID}
+        )
+    </insert>
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>

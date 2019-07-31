@@ -1,0 +1,243 @@
+body{
+	background-color: #ddf2ff;
+}
+.right1 .all a{
+	float: right;
+	margin-left: -40px;
+}
+.union{
+	height: 100px;
+	width: 100px;
+	margin-left: 48px;
+	margin-top: 27px;
+}
+.logo{
+	width: 350px;
+	margin-top: 15px;
+}
+.header{
+	height: 146px;
+    background-image: url(../img/捕获.PNG);
+	width: 1204px;
+	margin: 0 auto;
+}
+.right1{
+	float: right;
+	margin-right: 100px;
+	width: 600px;
+	margin-top: 16px;
+}
+.right1 a{
+	text-decoration: none;
+	color: black;
+}
+.row{
+	margin-top: 30px;
+}
+.school-main{
+	float: right;
+	position: relative;
+	z-index: 5;
+	margin-right: -36px;
+}
+.school-main a{
+	text-decoration: none;
+	color: #000000;
+}
+.school-main a:hover{
+	color: red;
+}
+.top1{
+	position: relative;
+	z-index: 4;
+	height: 50px;
+	float: right;
+	margin-right: -56px;
+	margin-top: 30px;
+}
+.text{
+	border-radius: 10px;
+	margin-left: -10px;
+}
+.search1{
+	width: 30px;
+	height: 30px;
+}
+.log2{
+	width: 40px;
+	height: 40px;
+}
+/*三级导航*/
+.bottom{
+	float: right;
+	position: absolute;
+	z-index: 3;
+}
+.bottom a:hover{
+	color: red;
+}
+ol,ul,li{
+    list-style: none;
+}
+.head-nav {
+    width: 100%;
+    height: 60px;
+}
+.head-nav-con {
+    width: 1200px;
+    height: 73px;
+    margin: auto;
+    margin-top: 70px;
+}
+.head-nav-con ul li {
+    width: 103px;
+    float: left;
+    font-size: 15px;
+    text-align: center;
+}
+.head-nav-con ul li:hover {
+   background-color: rgba(255,255,255,0.9);
+}
+.head-nav-con ul a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 60px;
+    color: #000000;
+}
+.head-nav-con .drop-down {
+    position: relative;
+}
+.head-nav-con .drop-down-content {
+    padding: 0;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    background: rgba(255,255,255,0.9);
+}
+.head-nav-con .drop-down:hover .drop-down-content {
+    display: block;
+}
+.head-nav-con .drop-down-2 {
+    position: relative;
+}
+.head-nav-con .drop-down-content-2 {
+    padding: 0;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    left: -103px;
+    top: 0;
+}
+.head-nav-con .drop-down-content-2 > li {
+    float: none;
+    background-color: rgba(255,255,255,0.9);
+}
+.head-nav-con .drop-down-content-2 li:hover a {
+   background-color: rgba(255,255,255,0.9);
+}
+.head-nav-con .drop-down-2:hover .drop-down-content-2 {
+    display: block;
+}
+.drop-down-content .drop-down-content-2 a{
+	font-size: 10px;
+}
+#one{
+	width: 280px;
+	margin-left: -177px;
+}
+#two{
+	width: 150px;
+	margin-left: -47px;
+}
+.main{
+	margin: 0 auto;
+	width:1200px;
+	height:1100px;
+	background-color:rgb(245 245 245);
+	border-top:1px solid rgb(204 204 204);
+}
+.main .left1{
+	width:200px;
+	height:1098px;
+	float:left;
+	border-right:1px solid #D3D3D3;
+	background-color: #f8f8f8;
+	font-size: 17px;
+	position: relative;
+	z-index: 1;
+	font-family: "宋体"
+}
+.left1 span{
+	font-size:15px;
+	margin-top:8px;
+	float:right;
+}
+.left1 a{
+	font-size: 20px;
+}
+.left1 img{
+	margin-top: 345px;
+}
+.leader img{
+	width: 1000px;
+	height: 250px;
+}
+.footer{
+	background-image: url(../img/footer.PNG);
+	background-repeat: no-repeat;
+	height: 200px;
+	margin: 0 auto;
+	width: 1200px;
+}
+#content{
+	float: left;
+}
+#content p{
+	margin-left: 200px;
+	margin-top: 30px;
+}
+.picture img{
+	width: 1000px;
+	height: 300px;
+}
+.now{
+	background-image: url(../img/background5.PNG);
+	background-repeat: no-repeat;
+	margin-left: 200px;
+}
+.picture p{
+	margin-left: 785px;
+}
+.picture a{
+	text-decoration: none;
+	color: #000000;
+}
+.news{
+	margin-left: 200px;
+	margin-top: 10px;
+	width: 1000px;
+}
+.news li{
+	list-style-type: disc;
+	color: red;
+	margin-top: 10px;
+}
+#idData a{
+	text-decoration: none;
+	font-size: 15px;
+	color: #000000;
+}
+#fenye{
+	margin-left: 300px;
+	margin-top: 20px;
+}
+#fenye input{
+	width: 30px;
+}
+#go{
+	margin-left: 30px;
+}
+#fenye button{
+	background-color: rgba(255,255,255,0.5);
+}

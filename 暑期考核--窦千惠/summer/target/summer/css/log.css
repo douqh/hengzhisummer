@@ -1,0 +1,219 @@
+﻿body{
+	background-image: url(../img/background3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	/*background-color: floralwhite;*/
+}
+.log{
+	background-color: rgba(244,244,244,0.2);
+	border: 1px solid rgb(204 204 204);
+	width: 330px;
+	height: 500px;
+	float: right;
+	margin-right: 700px;
+	border-radius: 18px;
+	margin-top: 30px;
+	position: relative;
+	z-index: 3;
+}
+/*登录注册*/
+.top{
+	width: 88%;
+	margin-left: 39px;
+	margin-top: -16px;
+}
+.top ul {
+	list-style: none;
+	width: 100%;
+	height: 56px;
+	background-color: lightgrey;
+	border-radius: 18px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-left: -40px;
+}
+
+.top .denglu{
+	margin-left: -39px;
+	float: left;
+	text-align: center;
+	width: 170px;
+	font-size: 30px;
+	display: block;
+	border-right: 1px solid #C2C2C2;
+	border-top-right-radius:0;
+}
+.top .zhuce{
+	margin-left: -1px;
+	float: left;
+	text-align: center;
+	width: 159px;
+	font-size: 30px;
+	display: block;
+	border-right:0px;
+	border-top-right-radius:0;
+}
+.top ul li:hover {
+	background-color: #6CA6CD;
+	border-radius: 18px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	color: white;
+}
+
+.top ul li button {
+	height: 56px;
+	background-color: transparent;
+	border: none;
+	font-size: 21px;
+	width: 160px;
+}
+/*ending*/
+.person img{
+	margin-left: 135px;
+	margin-top: 20px;
+}
+.left1{
+	width: 30%;
+}
+.left1 img{
+	float: left;
+	margin-left: 43px;
+	margin-top: 14px;
+}
+.right1{
+	width: 60%;
+	float: left;
+	margin-top: 18px;
+	margin-left: 14px;
+}
+.left2{
+	width: 30%;
+}
+.left2 img{
+	float: left;
+	margin-left: 25px;
+}
+.right2{
+	width: 60%;
+	float: left;
+	margin-top: 24px;
+	margin-left: 1px;
+}
+.left3{
+	width: 30%;
+}
+.left3 img{
+	float: left;
+	margin-left: 35px;
+}
+.right3{
+	width: 60%;
+	float: left;
+	margin-top: 13px;
+	margin-left: 10px;
+}
+.left4{
+	width: 30%;
+}
+.left4 img{
+	float: left;
+	margin-left: 31px;
+}
+.right4{
+	width: 60%;
+	float: left;
+	margin-top: 13px;
+	margin-left: 10px;
+}
+.left7{
+	width: 30%;
+}
+.left7 img{
+	float: left;
+	margin-left: 22px;
+}
+.right7{
+	width: 60%;
+	float: left;
+}
+.right7 input{
+	margin-top: 22px;
+	margin-left: -1px;
+}
+.exam{
+	float: left;
+}
+.exam p{
+           float:left;
+           margin-left:110px;
+}
+#code{  
+    font-family:Arial;  
+    font-style:italic;  
+    font-weight:bold;  
+    border:0;  
+    letter-spacing:2px;   
+}
+#code1{  
+    font-family:Arial;  
+    font-style:italic;  
+    font-weight:bold;  
+    border:0;  
+    letter-spacing:2px;   
+}
+.button{
+    width:60px;
+    height:23px;
+    outline: none;
+}
+.text{
+	width: 85px;
+	margin-left: 44px;
+	margin-top: 27px;
+}
+.footer{
+	width: 330px;
+}
+.footer a{
+	text-decoration: none;
+	
+}
+.footer input{
+	margin-left: 44px;
+	width: 218px;
+	height: 28px;
+	margin-top: 30px;
+}
+.enter{
+	display: none;
+}
+.more {
+	width: 100%;
+	height: 40px;
+	margin-right: auto;
+	margin-left: auto;
+	float: left;
+}
+.left6{
+	width: 30%;
+	float: left;
+	margin-top: 42px;
+	margin-left: -37px;
+}
+
+.right6{
+	float: left;
+	margin-top: 42px;
+	margin-left: 51px;
+}
+.left6 a{
+	font-size: 13px;
+	color: grey;
+	text-decoration: none;
+}
+.right6 a{
+	text-decoration: none;
+	font-size: 13px;
+	color: grey;
+}
